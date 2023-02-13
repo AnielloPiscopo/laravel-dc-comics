@@ -7,7 +7,6 @@
     <title>Comics List</title>
 </head>
 <body>
-    @dump(Request::route()->getName());
     <table>
         <thead>
             <tr>
