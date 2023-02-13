@@ -1,4 +1,15 @@
 <?php
+/**
+ * Comics Db
+ *  
+ * @param string $title
+ * @param text $description
+ * @param text $thumb
+ * @param float $price
+ * @param string $series
+ * @param date $sale_date
+ * @param string $type
+ */
 
 return [
     [

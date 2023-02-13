@@ -1,5 +1,14 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Comic Controller
+|--------------------------------------------------------------------------
+|
+| A controller for the istance Train
+|
+*/
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -10,7 +19,8 @@ class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *  
+     * @param Comic $comic 
      * @return \Illuminate\Http\Response
      */
     public function index()
