@@ -14,7 +14,7 @@
 
 @section('main-content')
 @php
-    $imgsPath = '~resources/assets/images/';
+    $imgsPath = 'resources/assets/images/';
     
     $navItems= [
             [
@@ -74,7 +74,7 @@
         @foreach ($navItems as $navItem)
         <li>
             <a href="#" class="my_d-flex my_align-center my_text-uppercase">
-                <img src="{{Vite::asset($imgsPath . $navItem['src'])}}" alt="{{$navItem['text']}}">
+                <img src="{{Vite::asset( $imgsPath . $navItem['src'])}}" alt="{{$navItem['text']}}">
                 <span>{{ $navItem['text'] }}</span>
             </a>
         </li>
