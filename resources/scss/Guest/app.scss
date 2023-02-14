@@ -1,0 +1,43 @@
+/*
+|--------------------------------------------------------------------------
+| App SCSS
+|--------------------------------------------------------------------------
+|
+| This file contains all the main scss styles 
+| useful for this webpage.
+|
+*/
+
+// * IMPORTS
+@use "../partials/variables.scss" as *;
+@use "../partials/header.scss" as *;
+@use "../partials/footer.scss" as *;
+
+// * TAG STYLES
+
+body {
+    min-width: 1450px;
+    font-family: sans-serif;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+// * CLASSES STYLES
+
+.my_container {
+    padding: 1.2rem 12rem;
+}
+
+// * SPECIFIC STYLES
+
+// ? MAIN
+main {
+    .my_background {
+        background-image: url("~resources/assets/images/jumbotron.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 350px;
+    }
+}

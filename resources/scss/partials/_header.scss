@@ -1,0 +1,74 @@
+/*
+|--------------------------------------------------------------------------
+| Header SCSS
+|--------------------------------------------------------------------------
+|
+| Styles for the header.
+|
+*/
+
+// * IMPORTS
+@use "./variables.scss" as *;
+
+// * HEADER
+header {
+    aside {
+        background-color: $complementary--color;
+        span {
+            font-size: 0.7rem;
+            color: $primary--color;
+            cursor: pointer;
+            padding: 0.3rem 0 0.3rem 5rem;
+        }
+    }
+
+    .my_container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    nav {
+        background-color: $primary--color;
+        height: 100px;
+
+        .my_logo-container {
+            width: 60px;
+        }
+
+        ul {
+            height: 100%;
+
+            li {
+                margin-right: 2.3rem;
+                line-height: 97px;
+
+                &.my_active {
+                    border-bottom: 3px solid $complementary--color;
+
+                    a {
+                        color: $complementary--color;
+                    }
+                }
+
+                a {
+                    font-size: 0.7rem;
+                    font-weight: bold;
+                    color: $darker--icon--bg-color;
+
+                    &:hover {
+                        color: $secondary--color;
+                    }
+                }
+            }
+        }
+
+        input {
+            color: $secondary--color;
+            border: none;
+            border-bottom: 3px solid $complementary--color;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0 1rem 0.2rem 0;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/*
+|--------------------------------------------------------------------------
+| General SCSS
+|--------------------------------------------------------------------------
+|
+| This file contains general very useful scss styles.
+|
+*/
+
+// * GENERAL STYLES
+
+// ? UNIVERSAL SELECTOR
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ? TAG HTML
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+// ? CLASSI
+.my_d-flex {
+    display: flex;
+
+    &.my_justify-center {
+        justify-content: center;
+    }
+
+    &.my_justify-between {
+        justify-content: space-between;
+    }
+
+    &.my_justify-end {
+        justify-content: end;
+    }
+
+    &.my_justify-around {
+        justify-content: space-around;
+    }
+
+    &.my_align-center {
+        align-items: center;
+    }
+
+    &.my_wrap {
+        flex-wrap: wrap;
+    }
+
+    &.my_column {
+        flex-direction: column;
+    }
+}
+
+.my_p-relative {
+    position: relative;
+}
+
+.my_p-absolute {
+    position: absolute;
+}
+
+.my_text-uppercase {
+    text-transform: uppercase;
+}
+
+.my_text-end {
+    text-align: end;
+}

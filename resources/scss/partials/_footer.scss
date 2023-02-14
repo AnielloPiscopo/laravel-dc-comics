@@ -1,0 +1,110 @@
+/*
+|--------------------------------------------------------------------------
+| Footer SCSS
+|--------------------------------------------------------------------------
+|
+| Styles for the footer.
+|
+*/
+
+// * IMPORTS
+@use "./variables.scss" as *;
+
+// * FOOTER
+footer {
+    #navbar-container {
+        background-image: url("~resources/assets/images/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 23rem;
+
+        > * {
+            width: 50%;
+        }
+
+        &.my_container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .my_img-container {
+            background-image: url("../assets/images/dc-logo-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+        }
+
+        .my_left-content {
+            padding: 1.5rem 0 2rem 0;
+
+            nav {
+                height: 90%;
+
+                .my_nav-item {
+                    margin: 1rem 0;
+                    width: calc(100% / 3);
+
+                    .my_title {
+                        font-weight: bold;
+                        color: $primary--color;
+                    }
+
+                    li {
+                        font-size: 0.7rem;
+                        padding-bottom: 0.2rem;
+
+                        &:first-of-type {
+                            padding-top: 0.7rem;
+                        }
+
+                        a {
+                            color: $icon--bg-color;
+
+                            &:hover {
+                                color: $primary--color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.7rem;
+                color: $icon--bg-color;
+                margin-bottom: 3rem;
+
+                a {
+                    color: $complementary--color;
+                }
+            }
+        }
+    }
+
+    #social-links {
+        background-color: $lighter--secondary--color;
+
+        a {
+            color: $primary--color;
+        }
+
+        ul li {
+            margin-left: 1rem;
+
+            a:hover {
+                filter: brightness(2);
+            }
+        }
+
+        span {
+            font-weight: bold;
+            color: $complementary--color;
+        }
+
+        .my_btn {
+            padding: 0.7rem;
+            border: 2px solid $complementary--color;
+            font-size: 0.9rem;
+        }
+    }
+}
