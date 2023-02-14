@@ -1,16 +1,25 @@
 @extends('Admin.layouts.app')
 
 @section('main-content')
+@php
+$tableElements=[
+    'Id',
+    'Title',
+    'Description',
+    'Thumb',
+    'Price',
+    'Sale_Date',
+    'Type',
+    '#'
+];    
+@endphp
+
 <table>
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Thumb</th>
-            <th>Price</th>
-            <th>Sale_Date</th>
-            <th>Type</th>
+            @foreach ($tableElements as $tableEl)
+                <th>{{$tableEl}}</th>
+            @endforeach
         </tr> 
     </thead>
     <tbody>
