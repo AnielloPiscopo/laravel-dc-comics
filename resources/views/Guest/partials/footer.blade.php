@@ -103,7 +103,7 @@
                     <span class="my_text-uppercase my_title">{{ $navSection['title'] }}</span>
                     <ul>
                         @foreach ($navSection['navItems'] as $navItem)
-                        <li><a href="#" alt="{{$navItem}}">{{ $navItem }}</a></li>
+                        <li><a href="#">{{ $navItem }}</a></li>
                         @endforeach
                     </ul>
                 </div>

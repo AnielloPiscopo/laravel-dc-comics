@@ -73,14 +73,14 @@
     </aside>
 
     <nav class="my_d-flex my_justify-between my_align-center my_container">
-        <a class="my_logo-container" href="#">
+        <a class="my_logo-container" href="{{route('Guest.home')}}">
             <img src="{{Vite::asset('resources/assets/images/dc-logo.png')}}" alt="logo" title="logo">
         </a>
 
         <ul class="my_d-flex my_wrap">
             @foreach ($navItems as $navItem)
-            <li class="my_text-uppercase my_d-flex {{(Request::route()->getName() === $navItem['url']) ? 'my_active' : ''}}">
-                <a href="#">{{ $navItem['text'] }}</a>
+            <li class="my_text-uppercase my_d-flex {{(Request::route()->getName() === 'Guest.' . $navItem['url']) ? 'my_active' : ''}}">
+                <a href="{{route('Guest.' . $navItem['url'])}}">{{ $navItem['text'] }}</a>
             </li>
             @endforeach
         </ul>

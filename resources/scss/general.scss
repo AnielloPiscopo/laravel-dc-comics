@@ -31,7 +31,8 @@ a {
     text-decoration: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     box-shadow: none;
     outline: none;
 }

@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            @yield('title','Laravel Comics')
+            @yield('title','Laravel DC Comics')
         </title>
 
         <link rel="icon" href="{{Vite::asset('resources/assets/images/favicon.ico')}}">
