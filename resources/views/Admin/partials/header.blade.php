@@ -62,7 +62,7 @@ $navItems = [
         <ul class="my_d-flex my_justify-between my_align-center my_container">
             @foreach ($navItems as $navItem)
             <li class="my_text-uppercase my_d-flex">
-                <a href="{{route('Admin.' . $navItem['url'])}}">{{ $navItem['text'] }}</a>
+                <a href="{{route('Admin.pages.' . $navItem['url'])}}">{{ $navItem['text'] }}</a>
             </li>
             @endforeach
         </ul>

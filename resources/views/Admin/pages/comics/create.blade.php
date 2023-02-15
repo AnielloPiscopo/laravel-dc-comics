@@ -1,6 +1,6 @@
 @extends('Admin.layouts.app')
 @section('main-content')
-<form action="{{route('Admin.comics.store')}}" method="POST">
+<form action="{{route('Admin.pages.comics.store')}}" method="POST">
     @csrf
     <input type="text" name="title" placeholder="Insert the title">
     <textarea name="description" cols="30" rows="10" placeholder="Insert the description"></textarea>

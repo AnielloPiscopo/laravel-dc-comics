@@ -15,90 +15,90 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('Admin')->name('Admin.')->group(function () {
+Route::prefix('Admin')->name('Admin.pages.')->group(function () {
+    Route::get('/', function () {
+        return view('Admin.pages.home');
+    })->name('home');
+    
     Route::resource('comics',AdminComicController::class);
 
-    Route::get('/', function () {
-        return view('Admin.home');
-    })->name('home');
-
     Route::get('/characters', function () {
-        return view('Admin.characters');
+        return view('Admin.pages.characters');
     })->name('characters');
 
     Route::get('/movies', function () {
-        return view('Admin.movies');
+        return view('Admin.pages.movies');
     })->name('movies');
 
     Route::get('/tv', function () {
-        return view('Admin.tv');
+        return view('Admin.pages.tv');
     })->name('tv');
 
     Route::get('/games', function () {
-        return view('Admin.games');
+        return view('Admin.pages.games');
     })->name('games');
 
     Route::get('/collectibles', function () {
-        return view('Admin.collectibles');
+        return view('Admin.pages.collectibles');
     })->name('collectibles');
 
     Route::get('/videos', function () {
-        return view('Admin.videos');
+        return view('Admin.pages.videos');
     })->name('videos');
 
     Route::get('/fans', function () {
-        return view('Admin.fans');
+        return view('Admin.pages.fans');
     })->name('fans');
 
     Route::get('/news', function () {
-        return view('Admin.news');
+        return view('Admin.pages.news');
     })->name('news');
 
     Route::get('/shop', function () {
-        return view('Admin.shop');
+        return view('Admin.pages.shop');
     })->name('shop');
 });
 
-Route::prefix('')->name('Guest.')->group(function () {
+Route::prefix('')->name('Guest.pages.')->group(function () {
     Route::get('/', function () {
-        return view('Guest.home');
+        return view('Guest.pages.home');
     })->name('home');
 
     Route::get('/comics', [GuestComicController::class , 'index'])->name('comics');
 
     Route::get('/characters', function () {
-        return view('Guest.characters');
+        return view('Guest.pages.characters');
     })->name('characters');
 
     Route::get('/movies', function () {
-        return view('Guest.movies');
+        return view('Guest.pages.movies');
     })->name('movies');
 
     Route::get('/tv', function () {
-        return view('Guest.tv');
+        return view('Guest.pages.tv');
     })->name('tv');
 
     Route::get('/games', function () {
-        return view('Guest.games');
+        return view('Guest.pages.games');
     })->name('games');
 
     Route::get('/collectibles', function () {
-        return view('Guest.collectibles');
+        return view('Guest.pages.collectibles');
     })->name('collectibles');
 
     Route::get('/videos', function () {
-        return view('Guest.videos');
+        return view('Guest.pages.videos');
     })->name('videos');
 
     Route::get('/fans', function () {
-        return view('Guest.fans');
+        return view('Guest.pages.fans');
     })->name('fans');
 
     Route::get('/news', function () {
-        return view('Guest.news');
+        return view('Guest.pages.news');
     })->name('news');
 
     Route::get('/shop', function () {
-        return view('Guest.shop');
+        return view('Guest.pages.shop');
     })->name('shop');
 });
