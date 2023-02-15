@@ -35,6 +35,12 @@ $tableElements=[
                 <td>
                     <a href="{{route('Admin.pages.comics.show' , $comic->id)}}">Show</a>
                     <a href="{{route('Admin.pages.comics.edit' , $comic->id)}}">Edit</a>
+
+                    <form action="{{route('Admin.pages.comics.destroy' , $comic->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
