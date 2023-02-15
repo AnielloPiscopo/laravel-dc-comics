@@ -17,6 +17,46 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('Admin')->name('Admin.')->group(function () {
     Route::resource('comics',AdminComicController::class);
+
+    Route::get('/', function () {
+        return view('Admin.home');
+    })->name('home');
+
+    Route::get('/characters', function () {
+        return view('Admin.characters');
+    })->name('characters');
+
+    Route::get('/movies', function () {
+        return view('Admin.movies');
+    })->name('movies');
+
+    Route::get('/tv', function () {
+        return view('Admin.tv');
+    })->name('tv');
+
+    Route::get('/games', function () {
+        return view('Admin.games');
+    })->name('games');
+
+    Route::get('/collectibles', function () {
+        return view('Admin.collectibles');
+    })->name('collectibles');
+
+    Route::get('/videos', function () {
+        return view('Admin.videos');
+    })->name('videos');
+
+    Route::get('/fans', function () {
+        return view('Admin.fans');
+    })->name('fans');
+
+    Route::get('/news', function () {
+        return view('Admin.news');
+    })->name('news');
+
+    Route::get('/shop', function () {
+        return view('Admin.shop');
+    })->name('shop');
 });
 
 Route::prefix('')->name('Guest.')->group(function () {

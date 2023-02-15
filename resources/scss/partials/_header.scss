@@ -14,10 +14,9 @@
 header {
     aside {
         background-color: $complementary--color;
-        span {
+        a {
             font-size: 0.7rem;
             color: $primary--color;
-            cursor: pointer;
             padding: 0.3rem 0 0.3rem 5rem;
         }
     }

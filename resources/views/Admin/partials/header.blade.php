@@ -1,14 +1,9 @@
-{{--
-|--------------------------------------------------------------------------
-| Header
-|--------------------------------------------------------------------------
-|
-| This is the header of the webpage.
-|
---}}
-
 @php
-    $navItems = [
+$navItems = [
+                [
+                    'text'=> 'Home',
+                    'url'=> 'home',
+                ],
                 [
                     'text'=> 'Characters',
                     'url'=> 'characters',
@@ -61,30 +56,14 @@
             ]
 @endphp
 
-
 <header>
-    <aside class="my_d-flex my_justify-end my_container">
-        <a href="#">
-            DC POWER&#8480; VISA&#174;
-        </a>
-        <a href="#">
-            ADDITIONAL DC SITES
-        </a>
-    </aside>
-
-    <nav class="my_d-flex my_justify-between my_align-center my_container">
-        <a class="my_logo-container" href="{{route('Guest.home')}}">
-            <img src="{{Vite::asset('resources/assets/images/dc-logo.png')}}" alt="logo" title="logo">
-        </a>
-
-        <ul class="my_d-flex my_wrap">
+    <nav>
+        <ul class="my_d-flex my_justify-between my_align-center my_container">
             @foreach ($navItems as $navItem)
-            <li class="my_text-uppercase my_d-flex {{(Request::route()->getName() === 'Guest.' . $navItem['url']) ? 'my_active' : ''}}">
-                <a href="{{route('Guest.' . $navItem['url'])}}">{{ $navItem['text'] }}</a>
+            <li class="my_text-uppercase my_d-flex">
+                <a href="#">{{ $navItem['text'] }}</a>
             </li>
             @endforeach
         </ul>
-
-        <input type="text" name="" id="" placeholder='Search' class="my_text-end">
     </nav>
 </header>

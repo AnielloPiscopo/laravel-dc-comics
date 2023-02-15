@@ -18,7 +18,8 @@
 
 
     <body>
-
+        @include('Admin.partials.header')
+        
         <main>
             @yield('main-content')
         </main>
