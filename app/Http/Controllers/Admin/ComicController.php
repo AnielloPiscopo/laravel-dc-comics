@@ -37,7 +37,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('Admin.pages.comics.create');
+        $defaultComic = new Comic();
+        return view('Admin.pages.comics.create' , compact('defaultComic'));
     }
 
     /**
