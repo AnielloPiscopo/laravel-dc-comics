@@ -29,14 +29,14 @@ $tableElements=[
                 <td>{{$comic->title}}</td>
                 <td>{{$comic->description}}</td>
                 <td>{{$comic->thumb}}</td>
-                <td>{{$comic->price}}</td>
+                <td>{{$comic->price}}&dollar;</td>
                 <td>{{$comic->sale_date}}</td>
                 <td>{{$comic->type}}</td>
                 <td>
                     <a href="{{route('Admin.pages.comics.show' , $comic->id)}}">Show</a>
                     <a href="{{route('Admin.pages.comics.edit' , $comic->id)}}">Edit</a>
 
-                    <form action="{{route('Admin.pages.comics.destroy' , $comic->id)}}" method="POST">
+                    <form action="{{route('Admin.pages.comics.destroy' , $comic->id)}}" method="POST" data-form-destroy data-element-name = '{{$comic->title}}' >
                         @csrf
                         @method('DELETE')
                         <button type="submit">Delete</button>
@@ -45,5 +45,9 @@ $tableElements=[
             </tr>
         @endforeach
     </tbody>
-</table>    
+</table> 
+@endsection
+
+@section('scripts')
+@vite('resources/js/Admin/deleteComicElement.js')
 @endsection
