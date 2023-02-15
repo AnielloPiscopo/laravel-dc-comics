@@ -67,7 +67,7 @@
         <a href="#">
             DC POWER&#8480; VISA&#174;
         </a>
-        <a href="#">
+        <a href="{{route('Admin.home')}}">
             ADDITIONAL DC SITES
         </a>
     </aside>
