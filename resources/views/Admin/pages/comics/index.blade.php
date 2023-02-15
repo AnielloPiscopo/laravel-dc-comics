@@ -14,6 +14,10 @@ $tableElements=[
 ];    
 @endphp
 
+@if (session('message'))
+    <span>{{session('message')}}</span>
+@endif
+
 <table>
     <thead>
         <tr>

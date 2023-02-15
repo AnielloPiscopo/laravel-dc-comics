@@ -11,6 +11,10 @@
     ]
 @endphp
 
+@if (session('message'))
+    <span>{{session('message')}}</span>
+@endif
+
 <article class="my_card">
     <div class="my_img-container">
         <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}" title="{{$comic['series']}}">

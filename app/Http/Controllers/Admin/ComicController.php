@@ -55,7 +55,7 @@ class ComicController extends Controller
         $newComic->fill($formData);
         $newComic->save();
 
-        return redirect()->route('Admin.pages.comics.show',$newComic->id);
+        return redirect()->route('Admin.pages.comics.show',$newComic->id)->with('message' , "$newComic->title has been created");
     }
 
     /**
@@ -106,6 +106,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('Admin.pages.comics.index');
+        return redirect()->route('Admin.pages.comics.index')->with('message' , "$comic->title has been deleted");
     }
 }
