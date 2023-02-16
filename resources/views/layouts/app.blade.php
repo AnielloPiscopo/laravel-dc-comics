@@ -18,7 +18,7 @@
             @yield('title','Laravel DC Comics')
         </title>
 
-        <link rel="icon" href="{{Vite::asset('resources/assets/images/favicon.ico')}}">
+        <link rel="icon" href="{{Vite::asset('resources/assets/images/favicon.ico')}}" media="print" type="text/scss">
 
         <!-- Styles -->
         @vite('resources/js/Guest/app.js')
@@ -28,6 +28,7 @@
 
 
     <body>
+        <div id="loadOverlay" style="background-color:#333; position:absolute; top:0px; left:0px; width:100vw; height:100vh; z-index:2;"></div>
         @include('partials.header' , ["currentUserType" => $currentUserType , "otherUserType" => $otherUserType])
 
         <main>
