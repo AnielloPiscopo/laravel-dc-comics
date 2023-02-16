@@ -13,6 +13,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Comic;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -49,7 +50,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $formData = $request->all();
+        $currentDate = Carbon::now()->toDateString();
+        $formData = $request->validate([
+                "title"=> "required|between:2,255",
+                "description" => "required|min:10",
+                "price" => "between:0.1,999999.99",
+                "series" => "required|between:2,255",
+                "sale_date" => "before:$currentDate",
+                "type" => "required|between:2,255",
+            ]);
 
         $newComic = new Comic();
         $newComic->fill($formData);

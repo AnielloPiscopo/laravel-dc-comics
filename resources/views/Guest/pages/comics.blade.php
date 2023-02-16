@@ -59,9 +59,9 @@
             <article class="my_card">
                 <a href="{{route(Route::currentRouteName()) . '/comic' . $loop->iteration}}">
                     <div class="my_img-container">
-                        <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}" title="{{$comic['series']}}">
+                        <img src="{{$comic->thumb}}" alt="{{$comic->series}}" title="{{$comic->series}}">
                     </div>
-                    <span class="my_text-uppercase">{{ $comic['series'] }}</span>
+                    <span class="my_text-uppercase">{{ $comic->series }}</span>
                 </a>
             </article>
             @endforeach

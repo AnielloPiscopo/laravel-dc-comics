@@ -98,6 +98,10 @@
             @endforeach
         </ul>
 
+        @if ($currentUserType === 'Admin' && Request::route()->getName() === "Admin.pages.comics.index")    
+        <a href="{{route("Admin.pages.comics.create")}}">Create a new comic</a>
+        @else
         <input type="text" name="" id="" placeholder='Search' class="my_text-end">
+        @endif
     </nav>
 </header>
