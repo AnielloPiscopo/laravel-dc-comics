@@ -58,7 +58,20 @@ class ComicController extends Controller
                 "series" => "required|between:2,255",
                 "sale_date" => "before:$currentDate",
                 "type" => "required|between:2,255",
-            ]);
+            ],
+            [
+                'title.required' => 'Il titolo deve essere inserito obbligatoriamente',
+                'series.required' => 'La serie deve essere specificata',
+                'series.type' => 'Il tipo di fumetto deve essere specificato',
+                'description.required' => 'Deve inserire ancora una descrizione(min= 10 caratteri) per il fumetto',
+                'description.min' => 'La descrizione non è abbastanza lunga(min=10 caratteri)',
+                'sale_date.before' => 'La data non può essere uguale o superiore a quella attuale',
+                'title.between' => 'Il titolo deve avere un numero di caratteri compreso tra 2 e 255',
+                'series.between' => 'La serie deve avere un numero di caratteri compreso tra 2 e 255',
+                'type.between' => 'Il tipo del fumetto deve avere un numero di caratteri compreso tra 2 e 255',
+                'price.between' => 'Il prezzo deve essere compreso tra 0.1 e 999999.99',
+            ]
+        );
 
         $newComic = new Comic();
         $newComic->fill($formData);
