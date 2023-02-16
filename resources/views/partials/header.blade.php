@@ -89,8 +89,11 @@
 
         <ul class="my_d-flex my_wrap">
             @foreach ($navItems as $navItem)
-            <li class='my_text-uppercase my_d-flex {{(Request::route()->getName() === "$currentUserType.pages." . $navItem['url']) ? 'my_active' : ''}}'>
-                <a href="{{route("$currentUserType.pages." . $navItem['url'] . (($currentUserType === 'Admin' && $navItem['isPopulated']) ? '.index' : ''))}}">{{ $navItem['text'] }}</a>
+            @php
+                $navItemUrl = "$currentUserType.pages." . $navItem['url'] . (($currentUserType === 'Admin' && $navItem['isPopulated']) ? '.index' : '');
+            @endphp
+            <li class='my_text-uppercase my_d-flex {{(Request::route()->getName() === $navItemUrl) ? 'my_active' : ''}}'>
+                <a href="{{route("$navItemUrl")}}">{{ $navItem['text'] }}</a>
             </li>
             @endforeach
         </ul>
