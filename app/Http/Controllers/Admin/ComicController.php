@@ -2,10 +2,10 @@
 
 /*
 |--------------------------------------------------------------------------
-| Comic Controller
+| Comic Controller in Admin
 |--------------------------------------------------------------------------
 |
-| A controller for the istance Train
+| A controller for the istance Comic
 |
 */
 

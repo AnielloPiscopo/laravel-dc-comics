@@ -1,3 +1,14 @@
+/*
+|--------------------------------------------------------------------------
+| DeleteComicElement JS
+|--------------------------------------------------------------------------
+|
+| General JS file to view a pop-up after the
+| submit on the form for 
+| the elimination of a file.
+|
+*/
+
 const formElements = document.querySelectorAll("form[data-form-destroy]");
 
 formElements.forEach((formEl) => {
