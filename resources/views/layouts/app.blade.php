@@ -28,16 +28,12 @@
 
 
     <body>
-        @include('Guest.partials.header')
+        @include('partials.header' , ["currentUserType" => $currentUserType , "otherUserType" => $otherUserType])
 
         <main>
-            <section id="jumbotron">
-                <div class="my_background"></div>
-        
-                @yield('main-content')
-            </section>
+            @yield('main-content')
         </main>
         
-        @include('Guest.partials.footer')
+        @include('partials.footer' , ["currentUserType" => $currentUserType , "otherUserType" => $otherUserType])
     </body>
 </html>

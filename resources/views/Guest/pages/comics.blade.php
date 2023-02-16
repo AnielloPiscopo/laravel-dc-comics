@@ -8,7 +8,7 @@
 |
 --}}
 
-@extends('Guest.layouts.app')
+@extends('layouts.app' , ["currentUserType" => "Guest" , "otherUserType" => "Admin"])
 
 @section('title','Laravel Comics - Comics')
 
@@ -48,25 +48,29 @@
         ]
 @endphp
 
-<section id="comics-container" class="my_container my_p-relative">
-    <h2 class="my_title my_text-uppercase my_p-absolute">Current Series</h2>
+<section id="jumbotron">
+    <div class="my_background"></div>
 
-    <div class="my_cards-container my_d-flex my_wrap">
-        @foreach ($comics as $comic)
-        <article class="my_card">
-            <a href="{{route(Route::currentRouteName()) . '/comic' . $loop->iteration}}">
-                <div class="my_img-container">
-                    <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}" title="{{$comic['series']}}">
-                </div>
-                <span class="my_text-uppercase">{{ $comic['series'] }}</span>
-            </a>
-        </article>
-        @endforeach
-    </div>
-
-    <div class="my_btn-container my_d-flex my_justify-center">
-        <a href="#" class="my_btn my_text-uppercase">Load More</a>
-    </div>
+    <section id="comics-container" class="my_container my_p-relative">
+        <h2 class="my_title my_text-uppercase my_p-absolute">Current Series</h2>
+    
+        <div class="my_cards-container my_d-flex my_wrap">
+            @foreach ($comics as $comic)
+            <article class="my_card">
+                <a href="{{route(Route::currentRouteName()) . '/comic' . $loop->iteration}}">
+                    <div class="my_img-container">
+                        <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}" title="{{$comic['series']}}">
+                    </div>
+                    <span class="my_text-uppercase">{{ $comic['series'] }}</span>
+                </a>
+            </article>
+            @endforeach
+        </div>
+    
+        <div class="my_btn-container my_d-flex my_justify-center">
+            <a href="#" class="my_btn my_text-uppercase">Load More</a>
+        </div>
+    </section>
 </section>
 
 <nav class="my_container">
@@ -84,5 +88,5 @@
 @endsection
 
 @section('styles')
-<link rel="stylesheet" href="{{Vite::asset('resources/scss/Guest/pages/_comics.scss')}}">
+<link rel="stylesheet" href="{{Vite::asset('resources/scss/Guest/_comics.scss')}}">
 @endsection

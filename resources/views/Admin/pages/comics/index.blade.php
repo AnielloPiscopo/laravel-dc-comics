@@ -1,4 +1,4 @@
-@extends('Admin.layouts.app')
+@extends('layouts.app', ["currentUserType" => "Admin" , "otherUserType" => "Guest"])
 
 @section('main-content')
 @php

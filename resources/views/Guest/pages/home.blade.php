@@ -8,4 +8,4 @@
 |
 --}}
 
-@extends('Guest.layouts.app')
+@extends('layouts.app' , ["currentUserType" => "Guest" , "otherUserType" => "Admin"])
