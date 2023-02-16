@@ -11,50 +11,59 @@
 @use "~resources/scss/partials/variables" as *;
 
 main {
-    #comics-container {
-        background-color: $secondary--color;
-        font-size: 0.7rem;
+    #jumbotron {
+        .my_background {
+            background-image: url("~resources/assets/images/jumbotron.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+        }
 
-        .my_btn,
-        .my_title {
-            background-color: $complementary--color;
-            display: inline-block;
-            padding: 0.7rem 0;
+        #comics-container {
+            background-color: $secondary--color;
+            font-size: 0.7rem;
 
-            &.my_title {
-                padding-left: 2rem;
-                font-size: 1.2rem;
-                padding-right: 2rem;
+            .my_btn,
+            .my_title {
+                background-color: $complementary--color;
+                display: inline-block;
+                padding: 0.7rem 0;
+
+                &.my_title {
+                    padding-left: 2rem;
+                    font-size: 1.2rem;
+                    padding-right: 2rem;
+                    color: $primary--color;
+                }
+
+                &.my_p-absolute {
+                    bottom: calc(100% - 1.2rem);
+                }
+            }
+
+            a.my_btn {
+                padding-left: 3rem;
+                padding-right: 3rem;
                 color: $primary--color;
-            }
-        }
-
-        .my_title.my_p-absolute {
-            bottom: calc(100% - 1.2rem);
-        }
-
-        a.my_btn {
-            padding-left: 3rem;
-            padding-right: 3rem;
-            color: $primary--color;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
-
-        .my_card {
-            width: calc(100% / 6 - 2rem);
-            margin: 1rem;
-
-            a {
-                color: $primary--color;
+                font-weight: bold;
+                margin-top: 1rem;
             }
 
-            .my_img-container {
-                margin-bottom: 1rem;
-            }
+            .my_card {
+                width: calc(100% / 6 - 2rem);
+                margin: 1rem;
 
-            &:hover img {
-                filter: contrast(1.5);
+                a {
+                    color: $primary--color;
+                }
+
+                .my_img-container {
+                    margin-bottom: 1rem;
+                }
+
+                &:hover img {
+                    filter: contrast(1.5);
+                }
             }
         }
     }
