@@ -73,7 +73,7 @@
 
 
 <header>
-    <aside class="my_d-flex my_justify-end my_container">
+    <aside class="my_d-flex my_justify-end my_container {{$currentUserType === 'Admin' ? 'my_admin-section' : ''}}">
         <a href="#">
             DC POWER&#8480; VISA&#174;
         </a>

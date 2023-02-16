@@ -14,6 +14,11 @@
 header {
     aside {
         background-color: $complementary--color;
+
+        &.my_admin-section {
+            background-color: $admin-section--aside-color;
+        }
+
         a {
             font-size: 0.7rem;
             color: $primary--color;
