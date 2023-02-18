@@ -1,13 +1,13 @@
 /*
 |--------------------------------------------------------------------------
-| App JS in Admin
+| App JS in Guest
 |--------------------------------------------------------------------------
 |
-| General JS file for the Admin Section.
+| General JS file for the Guest Section.
 |
 */
 
-import "../bootstrap";
+import "./bootstrap";
 
 import "~resources/scss/app.scss";
 

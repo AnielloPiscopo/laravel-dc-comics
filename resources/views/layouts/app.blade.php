@@ -21,7 +21,7 @@
         <link rel="icon" href="{{Vite::asset('resources/assets/images/favicon.ico')}}" media="print" type="text/scss">
 
         <!-- Styles -->
-        @vite('resources/js/Guest/app.js')
+        @vite('resources/js/app.js')
         @yield('styles')
     </head>
 

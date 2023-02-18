@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Comic;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -48,11 +49,11 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Comic $comic)
     {
         $currentDate = Carbon::now()->toDateString();
         $formData = $request->validate([
-                "title"=> "required|between:2,255",
+                "title"=> ["required","between:2,255", Rule::unique('comics','title')->ignore($comic)],
                 "description" => "required|min:10",
                 "price" => "between:0.1,999999.99",
                 "series" => "required|between:2,255",
@@ -109,11 +110,32 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        $formData = $request->all();
 
-        $comic = Comic::findOrFail($id);
+        $currentDate = Carbon::now()->toDateString();
+        $formData = $request->validate([
+            "title"=> ["required","between:2,255", Rule::unique('comics','title')->ignore($comic)],
+            "description" => "required|min:10",
+            "price" => "between:0.1,999999.99",
+            "series" => "required|between:2,255",
+            "sale_date" => "before:$currentDate",
+            "type" => "required|between:2,255",
+        ],
+        [
+            'title.required' => 'Il titolo deve essere inserito obbligatoriamente',
+            'series.required' => 'La serie deve essere specificata',
+            'series.type' => 'Il tipo di fumetto deve essere specificato',
+            'description.required' => 'Deve inserire ancora una descrizione(min= 10 caratteri) per il fumetto',
+            'description.min' => 'La descrizione non è abbastanza lunga(min=10 caratteri)',
+            'sale_date.before' => 'La data non può essere uguale o superiore a quella attuale',
+            'title.between' => 'Il titolo deve avere un numero di caratteri compreso tra 2 e 255',
+            'series.between' => 'La serie deve avere un numero di caratteri compreso tra 2 e 255',
+            'type.between' => 'Il tipo del fumetto deve avere un numero di caratteri compreso tra 2 e 255',
+            'price.between' => 'Il prezzo deve essere compreso tra 0.1 e 999999.99',
+        ]
+    );
+
         $comic->update($formData);
 
         return redirect()->route('Admin.pages.comics.show',$comic->id);
