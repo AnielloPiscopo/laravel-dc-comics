@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-<img src="https://img.shields.io/badge/Laravel-777BB4.svg?style&logo=Laravel&logoColor=white" alt="Laravel" />
+<img src="https://img.shields.io/badge/Laravel-777BB4.svg?style&logo=Laravel&logoColor=white" alt="Laravel" width="100" />
 <br>LARAVEL-DC-COMICS
 </h1>
 <h3>◦ Recreation of the homepage of DC Comics made with PHP , CSS , SCSS , JS , Axios and Laravel</h3>
