@@ -1,10 +1,11 @@
 <div align="center">
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
-<br>laravel-dc-comics
+<img src="https://img.shields.io/badge/Laravel-777BB4.svg?style&logo=Laravel&logoColor=white" alt="Laravel" />
+<br>LARAVEL-DC-COMICS
 </h1>
-<h3>◦ HTTPStatus Exception: 429</h3>
-<h3>◦ Developed with the software and tools listed below.</h3>
+<h3>◦ Recreation of the homepage of DC Comics made with PHP , CSS , SCSS , JS , Axios and Laravel</h3>
+<h3>◦ Developed during the course of Full-Stack Web Developer with Boolean</h3>
+<h3>◦ Link of the same project made with Vue and Vite: https://aniellopiscopo.github.io/vite-comics/</h3>
 
 <p align="center">
 <img src="https://img.shields.io/badge/SVG-FFB13B.svg?style&logo=SVG&logoColor=black" alt="SVG" />
@@ -14,8 +15,6 @@
 <img src="https://img.shields.io/badge/Laravel-777BB4.svg?style&logo=Laravel&logoColor=white" alt="Laravel" />
 <img src="https://img.shields.io/badge/CSS3-E34F26.svg?style&logo=CSS3&logoColor=white" alt="CSS3" />
 <img src="https://img.shields.io/badge/Sass-CC6699.svg?style&logo=Sass&logoColor=white" alt="Sass" />
-<img src="https://img.shields.io/badge/Vite-646CFF.svg?style&logo=Vite&logoColor=white" alt="Vite" />
-<img src="https://img.shields.io/badge/Vue.js-4FC08D.svg?style&logo=vuedotjs&logoColor=white" alt="Vue.js" />
 
 <img src="https://img.shields.io/badge/Axios-5A29E4.svg?style&logo=Axios&logoColor=white" alt="Axios" />
 <img src="https://img.shields.io/badge/Lodash-3492FF.svg?style&logo=Lodash&logoColor=white" alt="Lodash" />
